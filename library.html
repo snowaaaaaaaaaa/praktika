@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>ВСП "ППФК НТУ "ХПІ"</title>
+</head>
+<body>
+    <header>
+        <div class="logo other-logo">
+            <img src="college-logo.png" alt="Логотип ППК НТУ ХПІ" class="logo-img">
+        </div>
+        <h1 class="site-title">Каталог</h1>
+        <div class="top-right-logos">
+            <a href="https://github.com/ppc-ntu-khpi" target="_blank">
+                <img src="2.jpg" alt="Сайт 2" class="link-logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="library.html">Каталог</a></li>
+                <li><a href="links.html">Посилання</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <aside class="sidebar">
+            <section class="search-container">
+                <input type="text" id="search-bar" placeholder="Введіть назву книги...">
+            </section>
+            <h2>Спеціальності</h2>
+            <ul id="specialties-list">
+                <li class="specialty selected" data-specialty="121">121. Розробка програмного забезпечення</li>
+                <li class="specialty" data-specialty="123">123. Обслуговування комп'ютерних систем і мереж</li>
+                <li class="specialty" data-specialty="133">133. Металорізальні верстати та роботехнічні комплекси</li>
+                <li class="specialty" data-specialty="141">141. Електроенергетика, електротехніка та електромеханіка</li>
+            </ul>
+            <a href="https://t.me/dvrwnk" class="suggest-book-button">Запропонуй книжку</a>
+        </aside>
+
+        <section class="books-container" id="books-container">
+            <!-- книжки будуть завантажуватись тут -->
+        </section>
+
+        <!-- модальне вікно на книжку -->
+        <div id="book-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <div class="modal-book-info">
+                    <img id="modal-book-image" class="modal-book-image" alt="Обкладинка книги">
+                    <div class="modal-book-details">
+                        <h2 id="modal-book-title"></h2>
+                        <p id="modal-book-author"></p>
+                        <p id="modal-book-year"></p>
+                        <p id="modal-book-description"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer2">
+        <p>© 2025 Каталог ВСП "ППФК НТУ "ХПІ". Всі права захищені.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
