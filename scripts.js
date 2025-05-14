@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const bookItem = document.createElement('div');
                     bookItem.classList.add('book-item');
                     bookItem.innerHTML = `
-                        <img src="images/${book.image}" alt="${book.title}" class="book-image">
+                        <img src="${book.image}" alt="${book.title}" class="book-image">
                         <div class="book-info">
                             <p class="book-title">${book.title}</p>
                             <p class="book-author">Автор: ${book.author}</p>
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     `;
 
                     bookItem.addEventListener('click', () => {
-                        modalBookImage.src = `images/${book.image}`;
+                        modalBookImage.src = `${book.image}`;
                         modalBookTitle.textContent = book.title;
                         modalBookAuthor.textContent = `Автор: ${book.author}`;
                         modalBookYear.textContent = `Рік: ${book.year}`;
@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const bookItem = document.createElement('div');
             bookItem.classList.add('book-item');
             bookItem.innerHTML = `
-                <img src="images/${book.image}" alt="${book.title}" class="book-image">
+                <img src="${book.image}" alt="${book.title}" class="book-image">
                 <div class="book-info">
                     <p class="book-title">${book.title}</p>
                     <p class="book-author">Автор: ${book.author}</p>
@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
 
             bookItem.addEventListener('click', () => {
-                modalBookImage.src = `images/${book.image}`;
+                modalBookImage.src = `${book.image}`;
                 modalBookTitle.textContent = book.title;
                 modalBookAuthor.textContent = `Автор: ${book.author}`;
                 modalBookYear.textContent = `Рік: ${book.year}`;
