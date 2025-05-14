@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         booksContainer.innerHTML = ''; 
 
         try {
-            const response = await fetch(`/kursova/api.php?specialty=${specialty}`);
+            const response = await fetch(/kursova/api.php?specialty=${specialty});
             console.log(response);  
             if (!response.ok) {
                 throw new Error('Не вдалося отримати дані з сервера');
@@ -29,20 +29,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 books.forEach(book => {
                     const bookItem = document.createElement('div');
                     bookItem.classList.add('book-item');
-                    bookItem.innerHTML = `
-                        <img src="${book.image}" alt="${book.title}" class="book-image">
+                    bookItem.innerHTML = 
+                        <img src="images/${book.image}" alt="${book.title}" class="book-image">
                         <div class="book-info">
                             <p class="book-title">${book.title}</p>
                             <p class="book-author">Автор: ${book.author}</p>
                             <p class="book-year">Рік: ${book.year}</p>
                         </div>
-                    `;
+                    ;
 
                     bookItem.addEventListener('click', () => {
-                        modalBookImage.src = `${book.image}`;
+                        modalBookImage.src = images/${book.image};
                         modalBookTitle.textContent = book.title;
-                        modalBookAuthor.textContent = `Автор: ${book.author}`;
-                        modalBookYear.textContent = `Рік: ${book.year}`;
+                        modalBookAuthor.textContent = Автор: ${book.author};
+                        modalBookYear.textContent = Рік: ${book.year};
                         modalBookDescription.textContent = book.description || "Опис книги поки що відсутній.";
                         modal.style.display = "block";
                     });
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
         booksContainer.innerHTML = ''; 
 
         try {
-            const response = await fetch(`/kursova/api.php?specialty=${specialty}`);
+            const response = await fetch(/kursova/api.php?specialty=${specialty});
             if (!response.ok) {
                 throw new Error('Не вдалося отримати дані з сервера');
             }
@@ -111,20 +111,20 @@ document.addEventListener('DOMContentLoaded', () => {
         books.forEach(book => {
             const bookItem = document.createElement('div');
             bookItem.classList.add('book-item');
-            bookItem.innerHTML = `
-                <img src="${book.image}" alt="${book.title}" class="book-image">
+            bookItem.innerHTML = 
+                <img src="images/${book.image}" alt="${book.title}" class="book-image">
                 <div class="book-info">
                     <p class="book-title">${book.title}</p>
                     <p class="book-author">Автор: ${book.author}</p>
                     <p class="book-year">Рік: ${book.year}</p>
                 </div>
-            `;
+            ;
 
             bookItem.addEventListener('click', () => {
-                modalBookImage.src = `${book.image}`;
+                modalBookImage.src = images/${book.image};
                 modalBookTitle.textContent = book.title;
-                modalBookAuthor.textContent = `Автор: ${book.author}`;
-                modalBookYear.textContent = `Рік: ${book.year}`;
+                modalBookAuthor.textContent = Автор: ${book.author};
+                modalBookYear.textContent = Рік: ${book.year};
                 modalBookDescription.textContent = book.description || "Опис книги поки що відсутній.";
                 modal.style.display = "block";
             });
