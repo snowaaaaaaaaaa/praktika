@@ -3,7 +3,7 @@ header('Content-Type: application/json');
 
 $host = 'books.mysql.database.azure.com';
 $dbname = 'books';
-$username = 'dvorovenko@books';
+$username = 'dvorovenko';
 $password = 'Davayzhe1';
 
 try {
