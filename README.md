@@ -42,3 +42,7 @@
 - **Адміністратор**: повний доступ до керування книжковим фондом.
 
 ---
+
+## Посилання 
+
+- https://ppcntukpi-gbb0amgtchcfg8fe.polandcentral-01.azurewebsites.net/library.html
