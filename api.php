@@ -6,9 +6,18 @@ $dbname = 'books';
 $username = 'dvorovenko';
 $password = 'Davayzhe1';
 
+$ssl_ca = 'C:\\xampp\\htdocs\\kursova\\BaltimoreCyberTrustRoot.crt.pem';
+
 try {
-    // Підключення до MySQL через PDO
-    $db = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
+    $db = new PDO(
+        "mysql:host=$host;dbname=$dbname;charset=utf8",
+        $username,
+        $password,
+        [
+            PDO::MYSQL_ATTR_SSL_CA => $ssl_ca,
+            PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT => false,
+        ]
+    );
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     $specialty = isset($_GET['specialty']) ? $_GET['specialty'] : null;
