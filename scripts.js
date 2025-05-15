@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
         booksContainer.innerHTML = ''; 
 
         try {
-            const response = await fetch(`/kursova/api.php?specialty=${specialty}`);
+            const response = await fetch(`/api.php?specialty=${specialty}`);
             if (!response.ok) {
                 throw new Error('Не вдалося отримати дані з сервера');
             }
