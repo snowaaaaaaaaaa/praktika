@@ -4,7 +4,7 @@ header('Content-Type: application/json');
 $host = 'books.mysql.database.azure.com';
 $dbname = 'books';
 $username = 'dvorovenko@books';
-$password = 'Premka228';
+$password = '';
 
 try {
     // Підключення до MySQL через PDO
