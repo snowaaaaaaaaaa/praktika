@@ -552,7 +552,6 @@ position: fixed;
     border: 2px solid #2e2e2e;
 }
 
-/* для файрфокса */
 .book-list {
     scrollbar-width: thin;
     scrollbar-color: #e60000 #2e2e2e;
@@ -577,5 +576,24 @@ position: fixed;
 
     .modal-book-details {
         text-align: center;
+    }
+}
+
+/*  для телефона */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar {
+        width: 100%;
+        max-width: 95%;
+        margin-bottom: 20px;
+    }
+
+    .books-container {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        justify-items: center;
     }
 }
